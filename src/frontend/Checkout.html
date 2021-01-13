@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <label id="vorname">Vorname</label>
+        <input id="vorname" type="text"><br>
+
+        <label id="nachname">Nachname</label>
+        <input id="nachname" type="text"><br>
+
+        <label id="email">Email-Adresse</label>
+        <input id="email" type="email"><br>
+
+        <input type="button" value="Einkauf abschliessen" id="finish">
+
+    </main>
+    <script type="module">
+        import { loadDetail } from "./build.app.js"; loadDetail();
+    </script>
+</body>
+
+</html>
