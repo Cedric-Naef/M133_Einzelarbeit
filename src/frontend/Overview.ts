@@ -1,17 +1,17 @@
 /// <reference lib="dom" />
 
-import { Person } from "../common/types";
+import { Product } from "../common/types";
 
 export async function loadOverview() {
-    const response = await fetch("/api/persons");
-    const persons: Person[] = await response.json();
+    const response = await fetch("/products");
+    const product: Product[] = await response.json();
 
     const list = document.querySelector("ul");
 
-    for (const person of persons) {
+    for (const prod of product) {
         list.innerHTML += `
             <li>
-                <a href="./page2.html?personId=${person.id}">${person.firstName} ${person.lastName}</a>
+                <a href="../products.json?id=${prod.id}">${prod.imageName} ${prod.productName} ${prod.specialOffer} ${prod.normalPrice}</a>
             </li>
         `;
     }
